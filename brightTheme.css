@@ -1,0 +1,63 @@
+.background {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.key1 {
+    background-color: seagreen;
+    color: white;
+}
+
+.key2 {
+    background-color: #39875b;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.key3 {
+    background-color: #336348;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button1{
+    background-color: white;
+    color: black;
+}
+.button1:hover {
+    background-color: #dededeff;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.2)
+}
+.button1:active {
+    background-color: #cacacaff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2)
+}
+
+.highlight1 {
+    background-color: seagreen;
+    color: white;
+}
+
+.highlight2 {
+    background-color: #4b5358;
+    color: white;
+}
+
+.highlight3 {
+    background-color: #dfdfdf;
+    color: black;
+}
+
+.pop1 {
+    background-color: #5da9e9;
+    color: white;
+}
+
+.pop2 {
+    background-color: #be2539;
+    color: white;
+}
+
+.pop3 {
+    background-color: #C19D49;
+    color: white;
+}
