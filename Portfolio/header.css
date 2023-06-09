@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    height: 100%
+}
+
+header{
+    background-color: seagreen;
+    width: 30%;
+    min-height: 100vh;
+}
+
+header h1{
+
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
