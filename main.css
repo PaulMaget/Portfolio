@@ -24,7 +24,7 @@ header div{
     text-align: center;
 }
 header img {
-    border-radius: 20px;
+    border-radius: 10px;
     width: 90%;
 }
 header h1{
@@ -47,12 +47,24 @@ header nav a {
     text-decoration: none;
     text-align: center;
     font-size: 1.5em;
-    margin:10px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 header nav span {
     padding: 10px 0 10px;
     border-radius: 10px;
     display: block;
+    transition: all .2s ease;
+}
+header nav a.active span{
+    transform:scale(1.05);
+}
+header nav a:hover:not(.active) span{
+    transition: all .2s ease;
+    transform:translateX(5px);
+}
+header nav a:hover.active span {
+    transition: all .2s ease;
+    transform: translateX(5px) scale(1.05);
 }
 
 /*Main*/
@@ -62,6 +74,7 @@ main>*, main>article{
 }
 main{
     padding: 20px 0 20px 0;
+    width: 100%;
 }
 main h1{
     font-size: 2em;
@@ -119,6 +132,9 @@ article h5 {
     padding-bottom: 2.5px;
     margin-bottom: 0;
 }
+article em{
+    font-weight:bold;
+}
 article div ul{
     margin-top: 5px;
 }
@@ -133,14 +149,17 @@ section{
 section div{
     position:relative;
     width:500px;
+    overflow:hidden;
+    border-radius: 10px;
+    height:280px;
 }
 section div img {
     aspect-ratio: 16 / 9;
     width: 500px;
-    border-radius: 20px;
+    transition: transform .2s
 }
-section div h1{
-    position:absolute;
+section div h1 {
+    position: absolute;
     margin: 0;
     padding: 10px 0 10px 0;
     bottom: 0;
@@ -148,6 +167,18 @@ section div h1{
     text-align: center;
     background-color: #23232334;
     border-radius: 0 0 20px 20px;
+    transition: all .2s
+}
+section a{
+    color:inherit;
+}
+section a div:hover img {
+    transition: all .5s ease;
+    transform: scale(1.08);
+}
+section a div:hover h1 {
+    transition: all .5s ease;
+    padding: 20px 0 20px 0;
 }
 
 /*Général*/
