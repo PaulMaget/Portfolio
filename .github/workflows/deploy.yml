@@ -14,19 +14,16 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'  # Remplacez par la version de .NET que vous utilisez
+        dotnet-version: '8.0.x'
 
     - name: Build and deploy
       run: |
-        dotnet build --configuration Release
-        dotnet publish -c Release -o ./publish
-        echo 'gh-pages' > ./publish/CNAME  # Ajoutez cette ligne si vous utilisez un domaine personnalisé
-        git checkout --orphan gh-pages
-        git rm -rf .
-        mv ./publish/* .
-        rm -rf ./publish
-        git add .
-        git commit -m "Deploy to GitHub Pages"
-        git push -f origin gh-pages
+        dotnet publish ./Portfolio.csproj -c:Release -p:GHPages=true -o dist/Portfolio --nologo
+
+    - name: Commit wwwroot to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        BRANCH: gh-pages
+        FOLDER: dist/Portfolio/wwwroot
