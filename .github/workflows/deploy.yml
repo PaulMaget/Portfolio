@@ -26,7 +26,6 @@ jobs:
       run: |
         dotnet build --configuration Release
         dotnet publish -c Release -o ./publish
-        echo 'gh-pages' > ./publish/CNAME  # Ajoutez cette ligne si vous utilisez un domaine personnalisé
         git checkout --orphan gh-pages
         git rm -rf .
         mv ./publish/* .
