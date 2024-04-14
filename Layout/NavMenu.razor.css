@@ -11,6 +11,11 @@
     font-size: 1.1rem;
 }
 
+.sidebar > .navbar > img {
+    border-radius: 10px;
+    width: 90%;
+}
+
 .bi {
     display: inline-block;
     position: relative;

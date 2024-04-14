@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\getPhoto.jpeg" />
+    <None Include="wwwroot\images\PaulMaget.jpg" />
+    <None Include="wwwroot\images\programation.jpg" />
+    <None Include="wwwroot\images\travail.webp" />
     <None Include="wwwroot\oldContent\brightTheme.css" />
     <None Include="wwwroot\oldContent\contact.html" />
     <None Include="wwwroot\oldContent\experiences.html" />
