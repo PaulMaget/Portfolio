@@ -11,4 +11,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.2" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\oldContent\brightTheme.css" />
+    <None Include="wwwroot\oldContent\contact.html" />
+    <None Include="wwwroot\oldContent\experiences.html" />
+    <None Include="wwwroot\oldContent\main.css" />
+    <None Include="wwwroot\oldContent\projets.html" />
+    <None Include="wwwroot\oldContent\_index.html" />
+  </ItemGroup>
+
 </Project>
