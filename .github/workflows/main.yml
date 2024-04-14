@@ -1,0 +1,27 @@
+# Construire le projet Blazor WebAssembly
+dotnet build --configuration Release
+
+# Publier le projet
+dotnet publish -c Release -o ./publish/wwwroot
+
+# Aller dans le répertoire de publication
+cd ./publish/wwwroot
+
+# Initialiser un nouveau dépôt Git
+git init
+
+# Ajouter les fichiers à Git
+git add .
+
+# Commit des fichiers
+git commit -m "Build and publish Blazor WebAssembly project"
+
+# Créer et basculer vers une nouvelle branche gh-pages
+git checkout -b gh-pages
+
+# Pousser la branche gh-pages vers GitHub
+git remote add origin https://github.com/votre_nom_utilisateur/nom_du_depot.git
+git push -u origin gh-pages --force
+
+# Revenir à la branche principale
+git checkout main
