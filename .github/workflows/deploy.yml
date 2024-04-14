@@ -20,7 +20,7 @@ jobs:
 
     - name: Build and deploy
       run: |
-        dotnet publish ./Portfolio/Portfolio.csproj -c:Release -p:GHPages=true -o dist/Portfolio --nologo
+        dotnet publish ./Portfolio.csproj -c:Release -p:GHPages=true -o dist/Portfolio --nologo
 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
