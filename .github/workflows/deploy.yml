@@ -16,20 +16,14 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'  # Remplacez par la version de .NET que vous utilisez
-        
-    - name: Configure Git
-      run: |
-        git config --global user.email "${{ secrets.GIT_EMAIL }}"
-        git config --global user.name "${{ secrets.GIT_NAME }}"
+        dotnet-version: '8.0.x'
 
     - name: Build and deploy
       run: |
-        dotnet build --configuration Release
-        dotnet publish -c Release -p:GHPages=true -o dist/Web
+        dotnet publish ./Portfolio.csproj -c:Release -p:GHPages=true -o dist/Portfolio --nologo
 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         BRANCH: gh-pages
-        FOLDER: dist/Web/wwwroot
+        FOLDER: dist/Portfolio/wwwroot
