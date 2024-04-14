@@ -10,7 +10,7 @@ main[b-57rfh191dz] {
 }
 
 .sidebar[b-57rfh191dz] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(180deg, #0b682f 0%, #2e8b71 100%);
 }
 
 .top-row[b-57rfh191dz] {
@@ -88,6 +88,11 @@ main[b-57rfh191dz] {
 
 .navbar-brand[b-jey3l8hr1c] {
     font-size: 1.1rem;
+}
+
+.sidebar > .navbar > img[b-jey3l8hr1c] {
+    border-radius: 10px;
+    width: 90%;
 }
 
 .bi[b-jey3l8hr1c] {
