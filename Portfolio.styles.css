@@ -53,7 +53,8 @@ main[b-57rfh191dz] {
     }
 
     .sidebar[b-57rfh191dz] {
-        width: 250px;
+        flex-basis: 15vw;
+        flex-shrink: 0;
         height: 100vh;
         position: sticky;
         top: 0;
@@ -93,6 +94,7 @@ main[b-57rfh191dz] {
 .sidebar > .navbar > img[b-jey3l8hr1c] {
     border-radius: 10px;
     width: 90%;
+    margin: auto;
 }
 
 .bi[b-jey3l8hr1c] {
