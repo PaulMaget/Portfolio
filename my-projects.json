@@ -1,0 +1,8 @@
+[
+  {
+    "name": "project 1",
+    "place": "IUT2",
+    "years": ["2023", "2024"],
+    "description": "lorem ipsum"
+  }
+]

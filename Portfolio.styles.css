@@ -1,3 +1,44 @@
+/* /Layout/Card.razor.rz.scp.css */
+.card[b-wnriovme6k] {
+    color: inherit;
+}
+
+.card[b-wnriovme6k] {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 280px;
+}
+
+.card img[b-wnriovme6k] {
+    aspect-ratio: 16 / 9;
+    width: 500px;
+    transition: transform .2s
+}
+
+.card h1[b-wnriovme6k] {
+    position: absolute;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffffd8;
+    backdrop-filter: blur(3px);
+    transition: all .2s
+}
+
+.card:hover img[b-wnriovme6k] {
+    transition: all .5s ease;
+    transform: scale(1.08);
+}
+
+.card:hover h1[b-wnriovme6k] {
+    transition: all .5s ease;
+    padding: 20px 0 20px 0;
+}
+
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-57rfh191dz] {
     position: relative;
@@ -163,7 +204,7 @@ main[b-57rfh191dz] {
     
     .nav-scrollable[b-jey3l8hr1c] {
         /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
+        /*height: calc(100vh - 3.5rem);*/
         overflow-y: auto;
     }
 }
