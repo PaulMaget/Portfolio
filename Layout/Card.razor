@@ -1,0 +1,19 @@
+﻿<div class="card" onclick="window.location = @Link">
+    @if(ImageSource != null)
+    {
+        <img src="@ImageSource" />
+    }
+    @if(Name != null)
+    {
+        <h1>@Name</h1>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? Name { get; set; }
+    [Parameter]
+    public string? ImageSource { get; set; }
+    [Parameter]
+    public string? Link { get; set; }
+}
