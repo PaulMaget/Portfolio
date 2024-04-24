@@ -1,0 +1,8 @@
+﻿@page "/home_"
+
+<h3 style="@(isVisible ? "" : "display=none")">Home</h3>
+
+@code {
+    [Parameter]
+    public bool isVisible { get; set; }
+}

@@ -1,5 +1,8 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager MyNavigationManager
 <div class="page">
+    <Home isVisible=@isOnHome />
+
     <div class="sidebar">
         <NavMenu />
     </div>
@@ -10,3 +13,7 @@
         </article>
     </main>
 </div>
+
+@code{
+    private bool isOnHome => MyNavigationManager.ToBaseRelativePath(MyNavigationManager.Uri) == "/home_";
+}

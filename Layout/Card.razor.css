@@ -1,0 +1,40 @@
+﻿.card {
+    color: inherit;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 280px;
+}
+
+.card img {
+    aspect-ratio: 16 / 9;
+    width: 500px;
+    transition: transform .2s
+}
+
+.card h1 {
+    position: absolute;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffffd8;
+    backdrop-filter: blur(3px);
+    transition: all .2s
+}
+
+.card:hover img {
+    transition: all .5s ease;
+    transform: scale(1.08);
+}
+
+.card:hover h1 {
+    transition: all .5s ease;
+    padding: 20px 0 20px 0;
+}
+
