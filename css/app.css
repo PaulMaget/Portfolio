@@ -1,12 +1,22 @@
-.layout-slide-in {
-    animation: slideIn 0.5s forwards;
+.layout-slide-in-left {
+    animation: slideInLeft 0.2s ease-out;
+}
+.layout-slide-out-left {
+    animation: slideOutLeft 0.2s ease-in;
 }
 
-.layout-slide-out {
-    animation: slideOut 0.5s forwards;
+.layout-slide-in-right {
+    animation: slideInRight 0.2s ease-out;
+}
+.layout-slide-out-right {
+    animation: slideOutRight 0.2s ease-in;
 }
 
-@keyframes slideIn {
+.layout-static {
+    transform: translateX(0);
+}
+
+@keyframes slideInLeft {
     from {
         transform: translateX(-100%);
     }
@@ -15,8 +25,7 @@
         transform: translateX(0);
     }
 }
-
-@keyframes slideOut {
+@keyframes slideOutLeft {
     from {
         transform: translateX(0);
     }
@@ -26,9 +35,32 @@
     }
 }
 
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 html, body {
     /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 h1:focus {
