@@ -1,6 +1,8 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@inject LayoutSwitchManager LayoutSwitchManager
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/full-screen-test">&#60;- Paul Maget</a>
+        <a class="navbar-brand" onclick="@BackAction">&#60;- Paul Maget</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,6 +42,8 @@
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    [Parameter] public Action BackAction { get; set; }
 
     private void ToggleNavMenu()
     {

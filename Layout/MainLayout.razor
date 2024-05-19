@@ -1,11 +1,14 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager MyNavigationManager
-<div class="page @(isNavigating ? "layout-slide-out" : "layout-slide-in")">
-    <Home isVisible=@isOnHome />
+@inject LayoutSwitchManager LayoutSwitchManager
 
+<div class="page @(LayoutSwitchManager.CurrentLayoutState switch{
+    LayoutTransitionState.Out => "layout-slide-out-left",
+    LayoutTransitionState.In => "layout-slide-in-right",
+    _ => ""
+})">
     <div class="sidebar">
-        <NavMenu />
-        @isOnHome
+        <NavMenu BackAction="@GoToHome" />
     </div>
 
     <main>
@@ -16,14 +19,8 @@
 </div>
 
 @code{
-    private bool isOnHome => MyNavigationManager.ToBaseRelativePath(MyNavigationManager.Uri) == "home_";
-
-    bool isNavigating = false;
-
-    protected override async Task OnParametersSetAsync()
+    private void GoToHome()
     {
-        isNavigating = true;
-        await Task.Delay(500);
-        isNavigating = false;
+        LayoutSwitchManager.GoToPage("/full-screen-test");
     }
 }

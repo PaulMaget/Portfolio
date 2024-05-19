@@ -1,29 +1,38 @@
 ﻿@inherits LayoutComponentBase
+@inject LayoutSwitchManager LayoutSwitchManager
 
 <div style="position:absolute;
             background-image: linear-gradient(180deg, #0b682f 0%, #2e8b71 100%);
             width:100%;
-            height:100%">
+            height:100%;
+            z-index:-100">
 
-</div>
+</div
+<button onclick="@Go">Go!!</button>
 
-<div class="page @(isNavigating ? "layout-slide-out" : "layout-slide-in")">
-    <main>
-        <article class="content px-4">
-            HOME
-            @Body
-            @isNavigating
-        </article>
-    </main>
+<div style="overflow: hidden;">
+    <div class="page @(LayoutSwitchManager.CurrentLayoutState switch{
+        LayoutTransitionState.In => "layout-slide-in-left",
+        LayoutTransitionState.Out => "layout-slide-out-right",
+        _ => ""
+    })">
+        <main>
+            <article class="content px-4">
+                HOME
+                @Body
+                @transitionState
+            </article>
+        </main>
+    </div>
 </div>
 
 @code {
-    bool isNavigating = false;
+    LayoutTransitionState transitionState = LayoutTransitionState.Static;
 
-    protected override async Task OnParametersSetAsync()
+
+    private void Go()
     {
-        isNavigating = true;
-        await Task.Delay(500);
-        isNavigating = false;
+       LayoutSwitchManager.GoToPage("/");
     }
+
 }
