@@ -14,22 +14,19 @@
     <div class="page @(LayoutSwitchManager.CurrentLayoutState switch{
         LayoutTransitionState.In => "layout-slide-in-left",
         LayoutTransitionState.Out => "layout-slide-out-right",
-        _ => ""
+        _ => "layout-static"
     })">
         <main>
             <article class="content px-4">
                 HOME
                 @Body
-                @transitionState
+                @LayoutSwitchManager.CurrentLayoutState
             </article>
         </main>
     </div>
 </div>
 
 @code {
-    LayoutTransitionState transitionState = LayoutTransitionState.Static;
-
-
     private void Go()
     {
        LayoutSwitchManager.GoToPage("/");

@@ -2,11 +2,21 @@
 @inject NavigationManager MyNavigationManager
 @inject LayoutSwitchManager LayoutSwitchManager
 
+    
 <div class="page @(LayoutSwitchManager.CurrentLayoutState switch{
     LayoutTransitionState.Out => "layout-slide-out-left",
     LayoutTransitionState.In => "layout-slide-in-right",
-    _ => ""
+    _ => "layout-static"
 })">
+
+    <div style="position:absolute;
+        background-image: linear-gradient(180deg, #0b682f 0%, #2e8b71 100%);
+        left:-100%;
+        width:100vw;
+        height:100vh;
+        z-index:-100;">
+    </div>
+
     <div class="sidebar">
         <NavMenu BackAction="@GoToHome" />
     </div>
@@ -17,6 +27,7 @@
         </article>
     </main>
 </div>
+
 
 @code{
     private void GoToHome()
