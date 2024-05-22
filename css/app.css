@@ -1,41 +1,44 @@
+:root{
+    --slide-speed: 5s;
+}
 .layout-slide-in-left {
-    animation: slideInLeft 0.2s ease-out;
+    animation: slideInLeft var(--slide-speed) ease-out;
 }
 .layout-slide-out-left {
-    animation: slideOutLeft 0.2s ease-in;
+    animation: slideOutLeft var(--slide-speed) ease-in;
 }
 
 .layout-slide-in-right {
-    animation: slideInRight 0.2s ease-out;
+    animation: slideInRight var(--slide-speed) ease-out;
 }
 .layout-slide-out-right {
-    animation: slideOutRight 0.2s ease-in;
+    animation: slideOutRight var(--slide-speed) ease-in;
 }
 
 .layout-slide-out-left::before, .layout-slide-out-right::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100vw;
+    left: -100%;
+    width: 400vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 1);
     z-index: 999;
-    opacity:100;
-    animation: fadeIn 0.2s ease-out;
+    opacity: 100;
+    animation: fadeIn var(--slide-speed) ease-out;
 }
 
 .layout-slide-in-left::before, .layout-slide-in-right::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100vw;
+    left: -100%;
+    width: 400vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 1);
     z-index: 999;
     opacity: 0;
-    animation: fadeOut 0.2s ease-out;
+    animation: fadeOut var(--slide-speed) ease-out;
 }
 
 .layout-static {
