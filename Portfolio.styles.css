@@ -44,7 +44,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    overflow-x: clip;
 }
 
 main[b-57rfh191dz] {
