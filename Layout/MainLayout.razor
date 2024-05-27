@@ -34,4 +34,12 @@
     {
         LayoutSwitchManager.GoToPage("/full-screen-test");
     }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+
+        LayoutSwitchManager.TransitionStateChanged += (s, e) => this.StateHasChanged();
+    }
+
 }

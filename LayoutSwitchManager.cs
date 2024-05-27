@@ -8,6 +8,8 @@ namespace Portfolio
 {
     public class LayoutSwitchManager
     {
+        public float TransitionDuration { get; } = 0.2f;
+
         private NavigationManager _navigationManager;
         EventHandler<LocationChangedEventArgs> locationChangedHandler;
 
@@ -21,7 +23,7 @@ namespace Portfolio
         public LayoutSwitchManager(NavigationManager navigationManager)
         {
             _navigationManager = navigationManager;
-            locationChangedHandler = (sender, e) => ResetStateAfterSeconds(5f);
+            locationChangedHandler = (sender, e) => ResetStateAfterSeconds(TransitionDuration);
         }
 
         ~LayoutSwitchManager()
@@ -32,17 +34,19 @@ namespace Portfolio
         public async Task GoToPage(string pageUrl)
         {
             CurrentLayoutState = LayoutTransitionState.Out;
-            await Task.Delay(TimeSpan.FromSeconds(5));
+            await Task.Delay(TimeSpan.FromSeconds(TransitionDuration));
             CurrentLayoutState = LayoutTransitionState.In;
             NotifyTransitionStateChanged(this, EventArgs.Empty);
             _navigationManager.LocationChanged += locationChangedHandler;
-            //_navigationManager.NavigateTo(pageUrl);
+            _navigationManager.NavigateTo(pageUrl);
+            _navigationManager.LocationChanged -= locationChangedHandler;
         }
 
-        private void ResetStateAfterSeconds(float delayInSeconds)
+        private async void ResetStateAfterSeconds(float delayInSeconds)
         {
-            Task.Delay(TimeSpan.FromSeconds(delayInSeconds));
+            await Task.Delay(TimeSpan.FromSeconds(delayInSeconds));
             CurrentLayoutState = LayoutTransitionState.Static;
+            NotifyTransitionStateChanged(this, EventArgs.Empty);
         }
     }
 }

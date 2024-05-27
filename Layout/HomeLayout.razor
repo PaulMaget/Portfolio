@@ -10,7 +10,7 @@
 </div
 <button onclick="@Go">Go!!</button>
 
-<div style="overflow: hidden;">
+<div style="">
     <div class="page @(LayoutSwitchManager.CurrentLayoutState switch{
         LayoutTransitionState.In => "layout-slide-in-left",
         LayoutTransitionState.Out => "layout-slide-out-right",
@@ -28,10 +28,16 @@
 
 @code {
 
-    
+
     private void Go()
     {
-       LayoutSwitchManager.GoToPage("/");
+        _ = LayoutSwitchManager.GoToPage("/");
     }
 
+    protected async override Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+
+        LayoutSwitchManager.TransitionStateChanged += (s, e) => this.StateHasChanged();
+    }
 }
