@@ -63,20 +63,20 @@ main[b-57rfh191dz] {
     align-items: center;
 }
 
-    .top-row[b-57rfh191dz]  a, .top-row[b-57rfh191dz]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
+.top-row[b-57rfh191dz]  a, .top-row[b-57rfh191dz]  .btn-link {
+    white-space: nowrap;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
 
-    .top-row[b-57rfh191dz]  a:hover, .top-row[b-57rfh191dz]  .btn-link:hover {
-        text-decoration: underline;
-    }
+.top-row[b-57rfh191dz]  a:hover, .top-row[b-57rfh191dz]  .btn-link:hover {
+    text-decoration: underline;
+}
 
-    .top-row[b-57rfh191dz]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.top-row[b-57rfh191dz]  a:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 640.98px) {
     .top-row[b-57rfh191dz] {
@@ -113,10 +113,10 @@ main[b-57rfh191dz] {
         width: 0;
     }
 
-    .top-row[b-57rfh191dz], article[b-57rfh191dz] {
+    /*.top-row, article {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
-    }
+    }*/
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-jey3l8hr1c] {
