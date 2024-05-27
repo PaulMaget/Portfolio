@@ -1,5 +1,5 @@
 :root{
-    --slide-speed: 5s;
+    --slide-speed: 0.2s;
 }
 .layout-slide-in-left {
     animation: slideInLeft var(--slide-speed) ease-out;
@@ -22,7 +22,7 @@
     left: -100%;
     width: 400vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
+    background-image: linear-gradient(180deg, #0b682f 0%, #2e8b71 100%);
     z-index: 999;
     opacity: 100;
     animation: fadeIn var(--slide-speed) ease-out;
@@ -35,7 +35,7 @@
     left: -100%;
     width: 400vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
+    background-image: linear-gradient(180deg, #0b682f 0%, #2e8b71 100%);
     z-index: 999;
     opacity: 0;
     animation: fadeOut var(--slide-speed) ease-out;
