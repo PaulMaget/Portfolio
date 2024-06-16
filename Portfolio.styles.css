@@ -24,7 +24,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #ffffffd8;
+    background-color: #2a2a2ad8;
     backdrop-filter: blur(3px);
     transition: all .2s
 }
