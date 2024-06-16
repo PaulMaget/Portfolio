@@ -1,0 +1,19 @@
+<div class="key3">
+    <h2 class="justified-content">@Name</h2>
+    <h3 class="justified-content">@Organisation</h3>
+    <h4 class="justified-content">@Date</h4>
+</div>
+<article class="justified-content">
+    @ChildContent
+</article>
+
+@code {
+    [Parameter]
+    public string? Name { get; set; }
+    [Parameter]
+    public string? Organisation { get; set; }
+    [Parameter]
+    public string? Date { get; set; }
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}
