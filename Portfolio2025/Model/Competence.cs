@@ -1,7 +1,7 @@
 ﻿using MudBlazor;
 using System.Runtime.CompilerServices;
 
-namespace Portfolio2025.Model;
+namespace Portfolio.Model;
 
 public record Competence
 {

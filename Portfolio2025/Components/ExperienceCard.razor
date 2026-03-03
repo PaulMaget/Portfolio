@@ -1,4 +1,6 @@
-﻿@using Portfolio2025.Model
+﻿@using Portfolio
+@using Portfolio.Layout
+@using Portfolio.Model
 
 <MudCard Class="@(IsActivated ? "active" : "inactive")" Elevation="@(IsActivated ? 3 : 1)"
 	onmouseenter="@( () => OnActivate())"

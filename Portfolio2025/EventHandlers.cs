@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
-namespace Portfolio2025;
+namespace Portfolio;
 
 /// <summary>
 /// This is a polyfill until https://github.com/dotnet/aspnetcore/pull/40829
