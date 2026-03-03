@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main-2025
 
 jobs:
   deploy:
@@ -24,10 +24,10 @@ jobs:
 
     - name: Build and deploy
       run: |
-        dotnet publish ./Portfolio2025/Portfolio2025.csproj -c:Release -p:GHPages=true -o dist/Portfolio2025 --nologo
+        dotnet publish ./Portfolio2025/Portfolio.csproj -c:Release -p:GHPages=true -o dist/Portfolio --nologo
 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         BRANCH: gh-pages
-        FOLDER: dist/Portfolio2025/wwwroot
+        FOLDER: dist/Portfolio/wwwroot
