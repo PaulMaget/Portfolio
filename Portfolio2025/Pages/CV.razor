@@ -1,7 +1,9 @@
 ﻿@page "/cv"
 @using Gotho.BlazorPdf.MudBlazor
+@inject HttpClient client
 
-<MudPdfViewer Url="/pdf/MAGET_Paul_CV.pdf"
+
+<MudPdfViewer Url="@(Path.Combine(client.BaseAddress?.AbsolutePath ?? throw new InvalidOperationException("No base adress"), "/pdf/MAGET_Paul_CV.pdf"))"
     DownloadButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.Toolbar"
     FindButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.None"
     HideThumbnails="true"
