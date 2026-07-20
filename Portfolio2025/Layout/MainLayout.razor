@@ -113,7 +113,7 @@
 
     protected override void OnInitialized()
     {
-        Theme.PaletteLight = new()
+        Theme.PaletteLight = new PaletteLight()
         {
             Primary = Colors.DeepPurple.Lighten1,
             Secondary = Colors.Teal.Lighten1,
@@ -121,7 +121,7 @@
 
             Background = Colors.DeepPurple.Lighten5
         };
-        Theme.PaletteDark = new()
+        Theme.PaletteDark = new PaletteDark()
 		{
             Secondary = Colors.Teal.Lighten1,
             Background = Colors.Gray.Darken4
@@ -138,7 +138,7 @@
             {
                 SelectedMode.Dark => true,
                 SelectedMode.Light => false,
-                SelectedMode.Auto => await _mudThemeProvider.GetSystemPreference(),
+                SelectedMode.Auto => !await _mudThemeProvider.GetSystemDarkModeAsync(),
                 _ => false
             };
             StateHasChanged();
@@ -152,7 +152,7 @@
         {
             SelectedMode.Dark => true,
             SelectedMode.Light => false,
-            SelectedMode.Auto => await _mudThemeProvider.GetSystemPreference(),
+            SelectedMode.Auto => !await _mudThemeProvider.GetSystemDarkModeAsync(),
             _ => false
         };
         StateHasChanged();
