@@ -45,7 +45,7 @@ public static class Competences
     public static Competence CSharp { get; } = new()
     {
         Name = "C#",
-        Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png",
+        Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/960px-Logo_C_sharp.svg.png",
         HtmlDescription = """
             J'ai initialement appris le C# en autodidacte pour utiliser Unity.<br>
             Je suis activement le développement du langage et de l'écosystème .Net.<br>
@@ -57,7 +57,7 @@ public static class Competences
 	public static Competence JavaScript { get; } = new()
 	{
         Name = "JavaScript",
-		Logo = "https://lh3.googleusercontent.com/proxy/nuWxyZIEBmlwkLPiIpq_bJ4eXDw9uozT2D6WSBxvR4NYB3bMZ9T1TrYNao1zQL9MivRNV33D9QeJiDbVManBCLt2Yw8muTBeeOF3ghlbhT2NiQFFScHqgFbwGqFMTKHop6gMf6jQz9kqkPH42mdpaJcx",
+		Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/960px-JavaScript-logo.png",
         HtmlDescription = """
 			J'ai appris le JavaScript pendant mon BUT.<br>
 			Je l'ai utilisé dans plusieurs projets universitaires, en vanilla et avec le framework Angular.
@@ -100,7 +100,7 @@ public static class Competences
     public static Competence NetCore { get; } = new()
     {
         Name = ".Net Core",
-        Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
+        Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/3840px-.NET_Core_Logo.svg.png",
         HtmlDescription = """
 			J'ai appris .Net en autodidacte avant de l'utiliser avec ASP .Net pendant mon stage et mon alternance de BUT.<br>
 			Je suis passionné par l'écosystème .Net et je continue à apprendre et à expérimenter avec les possibilités qu'il offre.
@@ -158,7 +158,7 @@ public static class Competences
     public static Competence SignalR { get; } = new()
     {
         Name = "SignalR",
-        Logo = "https://sofa1.at/wp-content/uploads/2023/03/SignalR-Logo.png",
+        Logo = "https://ilovedotnet.org/image/icons/signalr.webp",
         HtmlDescription = """
             J’ai appris SignalR pendant mon alternance de BUT.<br>
             Je l’ai utilisé pour mettre en place une communication par événements entre des applications backend et frontend.
