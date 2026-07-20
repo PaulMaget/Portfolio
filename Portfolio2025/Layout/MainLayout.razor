@@ -138,7 +138,7 @@
             {
                 SelectedMode.Dark => true,
                 SelectedMode.Light => false,
-                SelectedMode.Auto => !await _mudThemeProvider.GetSystemDarkModeAsync(),
+                SelectedMode.Auto => await _mudThemeProvider.GetSystemDarkModeAsync(),
                 _ => false
             };
             StateHasChanged();
@@ -152,7 +152,7 @@
         {
             SelectedMode.Dark => true,
             SelectedMode.Light => false,
-            SelectedMode.Auto => !await _mudThemeProvider.GetSystemDarkModeAsync(),
+            SelectedMode.Auto => await _mudThemeProvider.GetSystemDarkModeAsync(),
             _ => false
         };
         StateHasChanged();
