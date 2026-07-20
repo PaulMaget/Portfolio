@@ -24,7 +24,7 @@ public static class ExperienceExtensions
 
 public static class Experiences
 {
-    public static List<Experience> All => [StageMJC, OrganizingHistory, AlternanceAlpilink];
+    public static List<Experience> All => [StageMJC, OrganizingHistory, AlternanceAlpilink, StageNeofid];
 
     public static Experience StageMJC { get; } = new()
     {
@@ -161,6 +161,46 @@ public static class Experiences
             En raison des sommes d'argent en jeu, j’ai été particulièrement prudent lors de la communication avec le module monétique et pour la gestion des erreurs. Pour cette raison, j'ai développé un framework de test permettant aux testeurs de simuler des périphériques matériels.
         </p>
         <img src="./images/borne-click-and-collect.jpg" alt="Photo d'une borne" style="width: 50%" />
+        """,
+        ImageUrl = "./images/Kiosk-light.jpg",
+    };
+
+    public static Experience StageNeofid { get; } = new()
+    {
+        Name = "Développement d'un jeu vidéo",
+        Organization = "Neofid Studios",
+        Year = "2026",
+        Competences = [
+            Competences.CSharp,
+            Competences.Unity,
+        ],
+        HardSkills = [
+            "Développement Unity",
+            "Programmation C#",
+            "Conception d’architecture",
+        ],
+        SoftSkills = [
+            "Travail en équipe",
+            "Participation à la conception du jeu",
+            "Prise d’initiative",
+        ],
+        ShortHtmlDescription = """
+        <p>
+            Développement d'une vertical slice de jeu vidéo avec Unity.
+        </p>
+        """,
+        HtmlDescription = """
+        <p>
+            Pour conclure ma première année de Master, j'ai pu faire un stage dans l'entreprise <a class="default-link" href="https://neofid-studios.com/fr">Neofid Studios</a>.
+            Le studio est spécialisé dans le développement de jeux rétro, mais souhaitait faire un premier pas dans les jeux modernes.
+        </p>
+        <p>
+            Ma mission était de développer un ensemble de prototype, puis une vertical slice du jeu, en utilisant le moteur Unity et le langage C#.
+        </p>
+        <p>
+            Etant l'unique programmeur, j'ai communiqué étroitement avec les game designers et les artistes pour comprendre leurs besoins et implémenter leur travail dans le jeu.
+            J'étais particulièrement prudent lors de la conception de l'architecture pour permettre un maximum de flexibilité, afin de pouvoir faire évoluer le projet facilement lors des changements de game design.
+        </p>
         """,
         ImageUrl = "./images/Kiosk-light.jpg",
     };
