@@ -27,8 +27,8 @@
 			@((MarkupString)(Source?.HtmlDescription ?? ""))
 		</div>
 
-		<MudDivider DividerType="DividerType.Middle" />
-		<MudButton Href="@("./competences#" + Source?.GetId())">
+		<MudDivider DividerType="DividerType.Middle" Style="margin: 0.7em" />
+		<MudButton Href="@("./competences#" + Source?.GetId())" Style="padding: 0">
 			Voir plus
 		</MudButton>
 	</MudPopover>
