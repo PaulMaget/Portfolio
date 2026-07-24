@@ -2,13 +2,42 @@
 @using Gotho.BlazorPdf.MudBlazor
 @inject NavigationManager navigationManager
 
+<style>
+    @@media (max-width: 600px) {
+        .mud-toolbar-gutters {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+    .pdf-viewer .mud-toolbar > div:nth-child(1) {
+        display: none
+    }
 
-<MudPdfViewer Url="@(new Uri(new Uri(navigationManager.BaseUri), "pdf/MAGET_Paul_CV.pdf").AbsoluteUri)"
-    DownloadButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.Toolbar"
-    FindButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.None"
-    HideThumbnails="true"
-    PermitPdfUploads="false"
-/>
+    .pdf-viewer .mud-toolbar > div:nth-child(2) {
+        display: none
+    }
+
+    /* .pdf-viewer .mud-toolbar > div:nth-child(3) {
+        display: none
+    }
+
+    .pdf-viewer .mud-toolbar > p:nth-child(4) {
+        display: none
+    }
+
+    .pdf-viewer .mud-toolbar > p:nth-child(5) {
+        display: none
+    } */
+</style>
+
+<div class="pdf-viewer">
+    <MudPdfViewer Url="@(new Uri(new Uri(navigationManager.BaseUri), "pdf/MAGET_Paul_CV.pdf").AbsoluteUri)"
+                  DownloadButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.Toolbar"
+                  FindButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.None"
+                  HideThumbnails="true"
+                  PermitPdfUploads="false" />
+</div>
 
 @code {
 
