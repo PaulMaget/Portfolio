@@ -1,14 +1,11 @@
-﻿@using Portfolio
-@using Portfolio.Layout
-@using Portfolio.Model
+﻿@using Portfolio.Model
 
 <div style="padding: 0.5em; margin: auto">
-	@* <MudIcon  Icon="@Source.Logo" Style="display: block; margin: auto;" /> *@
 	<div style="display: block; margin: auto; width: 4em">
 		<MudImage Src="@Source.Logo" Fluid="true" Style="margin: auto;" />
 	</div>
 	<h3 style="margin: auto; margin-bottom:0.5em; text-align: center">@Source.Name</h3>
-	<p style="margin: auto; text-align: center">@((MarkupString)Source.HtmlDescription)</p>
+	<p style="margin: auto; text-align: justify">@((MarkupString)Source.HtmlDescription)</p>
 </div>
 
 @code {

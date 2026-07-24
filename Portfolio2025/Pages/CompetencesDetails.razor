@@ -1,8 +1,5 @@
 ﻿@page "/competences"
-@using Microsoft.AspNetCore.Components.Sections
-@using Portfolio
 @using Portfolio.Components
-@using Portfolio.Layout
 @using Portfolio.Model
 
 <h1>Mes Compétences</h1>
@@ -11,20 +8,36 @@
 {
 	if( item.index > 0)
 	{
-		<MudDivider Style="margin: 2em 10%" DividerType="DividerType.Middle" />
+		<MudDivider Style="margin: 4em 10%" DividerType="DividerType.Middle" />
 	}
 
 	<h2 style="margin-top: 1.5em">@item.category.GetName()</h2>
 
-	<MudGrid Justify="Justify.FlexStart">
+	<MudGrid Justify="Justify.FlexStart" Class="competence-grid">
 		@foreach (Competence competence in CompetencesSource.Where(c => c.Category == item.category))
 		{
-			<MudItem id="@competence.GetId()" xs="12" sm="12" md="12" lg="6" xl="4" xxl="3">
+			<MudItem id="@competence.GetId()" xs="12" sm="12" md="12" lg="6" xl="4" xxl="3" Class="competence-item">
 				<CompetenceContainer Source="competence" />
 			</MudItem>
 		}
 	</MudGrid>
 }
+
+<style>
+	.competence-grid {
+		margin: auto;
+	}
+
+	.mud-grid-item {
+		padding-left: 0 !important;
+	}
+
+	@@media (min-width: 600px) {
+		.competence-item>div {
+			margin: 1.5em !important
+		}
+	}
+</style>
 
 @code {
 

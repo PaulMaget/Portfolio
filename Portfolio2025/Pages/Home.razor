@@ -77,16 +77,14 @@
 
 <MudDivider DividerType="DividerType.Middle" Class="main-divider" />
 
-@* <h1>A propos de moi</h1> *@
-
 <div class="about-me">
 	<MudText Typo="Typo.body1">
-		Passionné d'informatique, je me suis spécialisé en C# après avoir fait un BUT informatique généraliste.<br />
+		Passionné d'informatique, je me suis spécialisé en C# après avoir fait un BUT informatique généraliste.
 		Mes compétences couvrent la conception orientée objet, le développement web / mobile, la gestion de projet et le jeu vidéo avec Unity.
 	</MudText>
 
 	<MudText Typo="Typo.body1">
-		J'ai l'habitude d'apprendre en autodidacte, je suis curieux et autonome.<br />
+		J'ai l'habitude d'apprendre en autodidacte, je suis curieux et autonome.
 		Je suis particulièrement intéressé par la conception d'architecture, le développement backend et le jeu vidéo.
 	</MudText>
 </div>
@@ -116,7 +114,7 @@
 <MudTimeline TimelineAlign="TimelineAlign.Start" Style="margin: 2em;">
 	<MudTimelineItem Color="Color.Secondary" Elevation="25">
 		<ItemOpposite>
-			<MudText Color="Color.Secondary" Typo="Typo.h6">2025-...</MudText>
+			<MudText Color="Color.Secondary" Typo="Typo.h6">2025-2027</MudText>
 		</ItemOpposite>
 		<ItemContent>
 			<MudPaper Elevation="0" Class="mt-n1">
@@ -158,11 +156,25 @@
 
 <MudDivider DividerType="DividerType.Middle" Class="main-divider" />
 
-<MudStack AlignItems="AlignItems.Center">
-	<MudButton Href="./contact" Color="Color.Secondary" Variant="Variant.Filled" DropShadow=true Style="margin: 40px; min-width: 45%; padding: 1.2em">
-		Me contacter
-	</MudButton>
-</MudStack>
+<div class="contact">
+	<h1>Me contacter</h1>
+
+	<ul>
+		<li>
+			Sur mon e-mail personnel : <MudLink Href="mailto:paul.pj.maget@gmail.com">paul.pj.maget@gmail.com</MudLink>
+		</li>
+		<li>
+			Sur mon e-mail universitaire : <MudLink Href="mailto:paul.maget@etu.univ-grenoble-alpes.fr">paul.maget@etu.univ-grenoble-alpes.fr</MudLink>
+		</li>
+	</ul>
+
+	<p>
+		Je suis également sur
+		<MudLink StartIcon="@Icons.Custom.Brands.GitHub" Href="https://github.com/PaulMaget">GitHub</MudLink>
+		et
+		<MudLink StartIcon="@Icons.Custom.Brands.LinkedIn" Href="https://www.linkedin.com/in/paul-maget-4495832b0/">LinkedIn</MudLink>.
+	</p>
+</div>
 
 <style>
 	.main-divider {
@@ -173,7 +185,37 @@
 	}
 	.about-me p {
 		margin: 1em;
-		text-align: center;
+		text-align: justify;
+	}
+
+	.contact {
+		border: solid var(--mud-palette-secondary) 5px;
+		border-radius: 15px;
+		padding: 2em;
+		margin-top: 5em;
+		margin-bottom: 0;
+	}
+
+	@@media (min-width: 600px) {
+		.contact  {
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+	}
+
+	.contact p {
+		margin: 1em;
+	}
+
+	.contact ul {
+		margin: 1em;
+		padding-left: 0;
+	}
+
+	.contact li {
+		margin: .5em;
+		font-size: 1.3em;
+		list-style: none
 	}
 </style>
 
