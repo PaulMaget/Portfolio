@@ -24,7 +24,7 @@ jobs:
 
     - name: Build and deploy
       run: |
-        dotnet publish ./Portfolio2025/Portfolio.csproj -c:Release -p:GHPages=true -o dist/Portfolio --nologo
+        dotnet publish ./Portfolio2025/Portfolio.csproj -c:Release -p:GHPages=true -p:BlazorBasePath=/Portfolio/ -o dist/Portfolio --nologo
 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
