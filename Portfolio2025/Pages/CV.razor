@@ -3,7 +3,7 @@
 @inject NavigationManager navigationManager
 
 
-<MudPdfViewer Url="@(Path.Combine(navigationManager.BaseUri ?? throw new InvalidOperationException("No base adress"), "/pdf/MAGET_Paul_CV.pdf"))"
+<MudPdfViewer Url="@(new Uri(new Uri(navigationManager.BaseUri), "pdf/MAGET_Paul_CV.pdf").AbsoluteUri)"
     DownloadButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.Toolbar"
     FindButtonLocation="Gotho.BlazorPdf.PdfMenuItemLocation.None"
     HideThumbnails="true"
