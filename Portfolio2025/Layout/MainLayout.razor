@@ -115,19 +115,20 @@
     {
         Theme.PaletteLight = new PaletteLight()
         {
-            Primary = Colors.DeepPurple.Lighten1,
+            Primary = "#6c6acc",
             Secondary = Colors.Teal.Lighten1,
             Tertiary = Colors.Amber.Default,
 
-            Background = Colors.DeepPurple.Lighten5
+            Background = "#F2F2F2"
         };
         Theme.PaletteDark = new PaletteDark()
 		{
+            Primary = "#707be0",
             Secondary = Colors.Teal.Lighten1,
-            Background = Colors.Gray.Darken4
+            Background = Colors.Gray.Darken4,
+            Surface = "rgb(46, 46, 52)",
+            TextPrimary = "rgba(255, 255, 255, 0.85)",
 		};
-
-        // BlazorIcon = await Http.GetStringAsync("images/blazor.svg");
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
