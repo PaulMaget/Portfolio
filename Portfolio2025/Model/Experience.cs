@@ -4,6 +4,7 @@ public record Experience
 {
     public required string Id { get; set; }
     public required string Name { get; set; }
+    public required string Nature { get; set; }
     public required string Organization { get; set; }
     public required string Year { get; set; }
     public required string ShortHtmlDescription { get; set; }
@@ -30,6 +31,7 @@ public static class Experiences
     {
         Id = "stage-mjc",
         Name = "Animation stages jeux vidéo",
+        Nature = "Bénévolat",
         Organization = "MJC Manosque",
         Year = "2022",
         Competences = [
@@ -72,6 +74,7 @@ public static class Experiences
     {
         Id = "organizing-history",
         Name = "Développement d'un jeu ludo-éducatif en ligne",
+        Nature = "Projet universitaire",
         Organization = "IUT2, dep. INFO, UGA, Grenoble (38)",
         Year = "2023-2024",
         Competences = [
@@ -119,6 +122,7 @@ public static class Experiences
     {
         Id = "alternance-alpilink",
         Name = "Développement backend borne",
+        Nature = "Alternance",
         Organization = "Alpilink",
         Year = "2024-2025",
         Competences = [
@@ -172,6 +176,7 @@ public static class Experiences
     {
         Id = "stage-neofid",
         Name = "Développement d'un jeu vidéo",
+        Nature = "Stage",
         Organization = "Neofid Studios",
         Year = "2026",
         Competences = [

@@ -1,8 +1,5 @@
 ﻿@page "/experiences-{id}"
-@using Microsoft.AspNetCore.Components.Sections
-@using Portfolio
 @using Portfolio.Components
-@using Portfolio.Layout
 @using Portfolio.Model
 
 @if (Source == null)
@@ -12,7 +9,7 @@
 }
 
 <h1>@(Source?.Name)</h1>
-<h2>@(Source?.Organization) - @(Source?.Year)</h2>
+<h2><MudChip T="string" Label="true" Style="margin: 5px">@Source?.Nature</MudChip> @(Source?.Organization) - @(Source?.Year)</h2>
 
 @if (Source?.Competences.Any() ?? false)
 {

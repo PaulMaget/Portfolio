@@ -1,6 +1,4 @@
-﻿@using Portfolio
-@using Portfolio.Layout
-@using Portfolio.Model
+﻿@using Portfolio.Model
 
 <MudCard Class="@(IsActivated ? "active" : "inactive")" Elevation="@(IsActivated ? 3 : 1)"
 	onmouseenter="@( () => OnActivate())"
@@ -14,6 +12,11 @@
 	}
 	<MudCardHeader>
 		<CardHeaderContent>
+			<div style="margin: 2px; display: flex; justify-content: space-between; align-items: center">
+				<MudChip T="string" Label="true" Style="margin: 0">@Source?.Nature</MudChip>
+				<b style="height: fit-content">@(Source?.Year)</b>
+			</div>
+
 			<h2>@(Source?.Name ?? "")</h2>
 		</CardHeaderContent>
 	</MudCardHeader>
@@ -89,15 +92,6 @@
 @code {
 	[Parameter]
 	public Experience? Source { get; set; }
-
-	//[Parameter]
-	//public string ImageUrl { get; set; } = "https://placehold.co/50x50";
-
-	// [Parameter]
-	// public string Title { get; set; } = "";
-
-	// [Parameter]
-	// public string Description { get; set; } = "";
 
 	public bool IsActivated { get; set; } = false;
 
