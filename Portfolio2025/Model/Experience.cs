@@ -2,6 +2,7 @@
 
 public record Experience
 {
+    public required string Id { get; set; }
     public required string Name { get; set; }
     public required string Organization { get; set; }
     public required string Year { get; set; }
@@ -15,10 +16,9 @@ public record Experience
 
 public static class ExperienceExtensions
 {
-    public static int GetId(this Experience experience)
+    public static string GetId(this Experience experience)
     {
-        return Experiences.All.Select((e, i) => new { e, i })
-            .FirstOrDefault(x => x.e == experience)?.i ?? -1;
+        return experience.Id;
     }
 }
 
@@ -28,6 +28,7 @@ public static class Experiences
 
     public static Experience StageMJC { get; } = new()
     {
+        Id = "stage-mjc",
         Name = "Animation stages jeux vidéo",
         Organization = "MJC Manosque",
         Year = "2022",
@@ -36,7 +37,7 @@ public static class Experiences
         ],
         HardSkills = [
             "Développement Unity 2D/3D",
-            //"URP",
+            "URP",
         ],
         SoftSkills = [
             "Préparation d’un projet",
@@ -69,6 +70,7 @@ public static class Experiences
 
     public static Experience OrganizingHistory { get; } = new()
     {
+        Id = "organizing-history",
         Name = "Développement d'un jeu ludo-éducatif en ligne",
         Organization = "IUT2, dep. INFO, UGA, Grenoble (38)",
         Year = "2023-2024",
@@ -115,6 +117,7 @@ public static class Experiences
 
     public static Experience AlternanceAlpilink { get; } = new()
     {
+        Id = "alternance-alpilink",
         Name = "Développement backend borne",
         Organization = "Alpilink",
         Year = "2024-2025",
@@ -167,6 +170,7 @@ public static class Experiences
 
     public static Experience StageNeofid { get; } = new()
     {
+        Id = "stage-neofid",
         Name = "Développement d'un jeu vidéo",
         Organization = "Neofid Studios",
         Year = "2026",
@@ -175,7 +179,9 @@ public static class Experiences
             Competences.Unity,
         ],
         HardSkills = [
-            "Développement Unity",
+            "Développement Unity 2D",
+            "URP",
+            "UiTookit",
             "Programmation C#",
             "Conception d’architecture",
         ],
@@ -192,16 +198,24 @@ public static class Experiences
         HtmlDescription = """
         <p>
             Pour conclure ma première année de Master, j'ai pu faire un stage dans l'entreprise <a class="default-link" href="https://neofid-studios.com/fr">Neofid Studios</a>.
-            Le studio est spécialisé dans le développement de jeux rétro, mais souhaitait faire un premier pas dans les jeux modernes.
+            Le studio est spécialisé dans le développement de jeux "rétro", mais souhaitait faire un premier pas dans les jeux modernes.
+            Neofid m'a initiallement contacté en 2024, après que des amis m'aient recommandés pour mes compétences avec Unity.
+        </p>
+        <img src="./images/DiveDeeper.png" alt="Capture du prototype visuel réalisé pendant le stage" style="width: 50%" />
+        <p>
+            Le jeu est en 2D, en vue de côté, inspiré de titres comme "Animal Well", "Resident Evil" ou "Hollow Knight".
+            Le joueur incarne un astronaute qui doit explorer et naviguer dans des grottes et des structures extraterrestres, remplies de créatures hostiles et de ressources à collecter.
+            Le jeu se démarque particulièrement par son esthétique qui est inspirée de jeux rétros, tout en y ajoutant des effets visuels modernes comme de l'éclairage, des normal maps, ainsi que de nombreux effets de particules et de post-traitement.
+            Le joueur a de nombreuses capacités de mouvements lui permettant de parcourir l'univers du jeu et de lutter contre des ennemis variés.
         </p>
         <p>
             Ma mission était de développer un ensemble de prototype, puis une vertical slice du jeu, en utilisant le moteur Unity et le langage C#.
         </p>
         <p>
-            Etant l'unique programmeur, j'ai communiqué étroitement avec les game designers et les artistes pour comprendre leurs besoins et implémenter leur travail dans le jeu.
+            Etant l'unique programmeur sur ce projet, j'ai communiqué étroitement avec les game designers et les artistes pour comprendre leurs besoins et implémenter leur travail dans le jeu.
             J'étais particulièrement prudent lors de la conception de l'architecture pour permettre un maximum de flexibilité, afin de pouvoir faire évoluer le projet facilement lors des changements de game design.
         </p>
         """,
-        ImageUrl = "./images/Kiosk-light.jpg",
+        ImageUrl = "./images/DiveDeeper.png",
     };
 }
