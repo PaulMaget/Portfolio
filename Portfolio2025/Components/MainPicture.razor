@@ -3,7 +3,9 @@
 	<div style="display:flex; flex-direction:column; justify-content:center;">
 		<div style="position: relative; height: @(Size + Top)px; width: @(Size)px">
 			<MudAvatar Variant="Variant.Text" style="@($"top: {Top}px; width: {Size}px; height: {Size}px; position: absolute")">
-				<MudImage Style="position: relative; top: 40px" Fluid=true Src="images/PaulMaget.jpg"></MudImage>
+				<div>
+					<MudImage Style="position: relative; top: 40px; left: -30px; width: 150%; max-width: none" Fluid=true Src="images/Portrait_2026.jpg"></MudImage>
+				</div>
 			</MudAvatar>
 		</div>
 		@ChildContent
