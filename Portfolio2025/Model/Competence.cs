@@ -48,8 +48,8 @@ public static class Competences
         Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/960px-Logo_C_sharp.svg.png",
         HtmlDescription = """
             J'ai initialement appris le C# en autodidacte pour utiliser Unity.<br>
-            Je suis activement le développement du langage et de l'écosystème .Net.<br>
-            J'ai eu l'occasion de travailler professionnellement avec le C# dans le cadre de mes stage et alternance de BUT, ainsi que mon stage de Master.
+            Je suis activement l'évolution du langage et de l'écosystème .Net.<br>
+            J'ai eu l'occasion de travailler professionnellement avec le C# dans le cadre de mon stage et de mon alternance de BUT, ainsi que mon stage de Master.
             """,
         Category = CompetenceCategory.Languages,
     };
@@ -149,7 +149,7 @@ public static class Competences
         Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/OpenGL_logo.svg/3840px-OpenGL_logo.svg.png",
         HtmlDescription = """
             J'ai appris OpenGL pendant mon Master, après une petite introduction à WebGL en BUT.<br>
-            Je l'ai utilisé avec du C++ dans le cadre de travaux pratique de génération de maillages et de développement de shaders avec GLSL.
+            Je l'ai utilisé avec du C++ dans le cadre de travaux pratiques de génération de maillages et de développement de shaders avec GLSL.
             """,
         Category = CompetenceCategory.Frameworks,
     };
@@ -159,7 +159,7 @@ public static class Competences
         Name = "Unity",
         Logo = "https://cdn-icons-png.flaticon.com/512/5969/5969346.png",
         HtmlDescription = """
-            J'apprends et je suis le développement d'Unity depuis 2019.<br>
+            J'apprends et je suis l'évolution de Unity depuis 2019.<br>
             J'ai eu l'occasion de participer à des Game Jams en 2023 et 2024.<br>
             Les jeux développés sont disponibles sur mon <a class="default-link" href="https://poldev.itch.io/">Itch.io</a>.
             J'ai eu l'occasion de travailler professionnellement avec Unity dans le cadre de mon stage de Master.

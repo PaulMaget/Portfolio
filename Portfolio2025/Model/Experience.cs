@@ -30,7 +30,7 @@ public static class Experiences
     public static Experience StageMJC { get; } = new()
     {
         Id = "stage-mjc",
-        Name = "Animation stages jeux vidéo",
+        Name = "Animation de stages de jeux vidéo",
         Nature = "Bénévolat",
         Organization = "MJC Manosque",
         Year = "2022",
@@ -204,7 +204,7 @@ public static class Experiences
         <p>
             Pour conclure ma première année de Master, j'ai pu faire un stage dans l'entreprise <a class="default-link" href="https://neofid-studios.com/fr">Neofid Studios</a>.
             Le studio est spécialisé dans le développement de jeux "rétro", mais souhaitait faire un premier pas dans les jeux modernes.
-            Neofid m'a initiallement contacté en 2024, après que des amis m'aient recommandés pour mes compétences avec Unity.
+            Neofid m'a initialement contacté en 2024, après que des amis m'aient recommandé pour mes compétences avec Unity.
         </p>
         <img src="./images/DiveDeeper.png" alt="Capture du prototype visuel réalisé pendant le stage" style="width: 50%" />
         <p>
@@ -217,7 +217,7 @@ public static class Experiences
             Ma mission était de développer un ensemble de prototype, puis une vertical slice du jeu, en utilisant le moteur Unity et le langage C#.
         </p>
         <p>
-            Etant l'unique programmeur sur ce projet, j'ai communiqué étroitement avec les game designers et les artistes pour comprendre leurs besoins et implémenter leur travail dans le jeu.
+            Étant l'unique programmeur sur ce projet, j'ai communiqué étroitement avec les game designers et les artistes pour comprendre leurs besoins et implémenter leur travail dans le jeu.
             J'étais particulièrement prudent lors de la conception de l'architecture pour permettre un maximum de flexibilité, afin de pouvoir faire évoluer le projet facilement lors des changements de game design.
         </p>
         """,
