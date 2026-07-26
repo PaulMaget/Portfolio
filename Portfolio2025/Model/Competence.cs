@@ -40,7 +40,7 @@ public static class CompetenceExtensions
 
 public static class Competences
 {
-	public static List<Competence> All => [CSharp, JavaScript, Php, Java, Cpp, NetCore, Angular, Symfony, Unity, RabbitMq, SignalR, Docker];
+	public static List<Competence> All => [CSharp, Cpp, JavaScript, Php, Java, NetCore, Angular, Symfony, Qt, OpenGL, Unity, RabbitMq, SignalR, Docker];
 
     public static Competence CSharp { get; } = new()
     {
@@ -49,7 +49,7 @@ public static class Competences
         HtmlDescription = """
             J'ai initialement appris le C# en autodidacte pour utiliser Unity.<br>
             Je suis activement le développement du langage et de l'écosystème .Net.<br>
-            J'ai eu l'occasion de travailler professionnellement avec C# dans le cadre de mon stage et de mon alternance de BUT.
+            J'ai eu l'occasion de travailler professionnellement avec le C# dans le cadre de mes stage et alternance de BUT, ainsi que mon stage de Master.
             """,
         Category = CompetenceCategory.Languages,
     };
@@ -81,8 +81,8 @@ public static class Competences
         Name = "Java",
         Logo = "./images/Java.png",
         HtmlDescription = """
-			J'ai appris le Java dans le cadre de mon BUT.
-			Je l'ai utilisé dans plusieurs projets universitaires.
+			J'ai appris le Java dans le cadre de mon BUT, puis en Master.<br>
+			Je l'ai utilisé dans de nombreux projets universitaires.
 			""",
         Category = CompetenceCategory.Languages,
     };
@@ -92,8 +92,10 @@ public static class Competences
         Name = "C++",
         Logo = "./images/Cpp.png",
         HtmlDescription = """
-			J'ai appris le C++ dans le cadre de mon BUT.
-			""",
+            J'ai initialement appris le C++ dans le cadre de mon BUT.<br>
+            J'ai ensuite revu le langage plus en profondeur pendant mon Master, notamment pour du développement OpenGL
+            et lors d'un projet universitaire avec le framework Qt.
+            """,
         Category = CompetenceCategory.Languages,
     };
 
@@ -130,17 +132,38 @@ public static class Competences
         Category = CompetenceCategory.Frameworks,
     };
 
+    public static Competence Qt { get; } = new()
+    {
+        Name = "Qt",
+        Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qt_logo_2016.svg/1280px-Qt_logo_2016.svg.png",
+        HtmlDescription = """
+            J'ai appris Qt pendant mon Master.<br>
+            Je l'ai utilisé pour développer des applications desktop dans le cadre de projets universitaires.
+            """,
+        Category = CompetenceCategory.Frameworks,
+    };
+
+    public static Competence OpenGL { get; } = new()
+    {
+        Name = "OpenGL",
+        Logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/OpenGL_logo.svg/3840px-OpenGL_logo.svg.png",
+        HtmlDescription = """
+            J'ai appris OpenGL pendant mon Master, après une petite introduction à WebGL en BUT.<br>
+            Je l'ai utilisé avec du C++ dans le cadre de travaux pratique de génération de maillages et de développement de shaders avec GLSL.
+            """,
+        Category = CompetenceCategory.Frameworks,
+    };
+
     public static Competence Unity { get; } = new()
     {
         Name = "Unity",
-        Logo = "https://cdn-icons-png.flaticon.com/512/5969/5969346.png",   // ./images/Unity.png
+        Logo = "https://cdn-icons-png.flaticon.com/512/5969/5969346.png",
         HtmlDescription = """
             J'apprends et je suis le développement d'Unity depuis 2019.<br>
             J'ai eu l'occasion de participer à des Game Jams en 2023 et 2024.<br>
             Les jeux développés sont disponibles sur mon <a class="default-link" href="https://poldev.itch.io/">Itch.io</a>.
+            J'ai eu l'occasion de travailler professionnellement avec Unity dans le cadre de mon stage de Master.
             """,
-        // J'expérimente avec le moteur pour comprendre ses fonctionnalités, ses bonnes pratiques
-        // et je développe des outils visant à améliorer la rapidité de développement.<br>
         Category = CompetenceCategory.Tools,
     };
 
@@ -171,7 +194,8 @@ public static class Competences
         Name = "Docker",
         Logo = "./images/Docker.png",
         HtmlDescription = """
-            J’ai appris Docker dans le cadre de mon BUT.
+            J’ai appris Docker dans le cadre de mon BUT.<br>
+            Je l'ai utilisé dans des projets universitaires de contenarisation d'application.
             """,
         Category = CompetenceCategory.Other,
     };
